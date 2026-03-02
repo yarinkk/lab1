@@ -1,5 +1,3 @@
-// Файл: Account.h
-
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
