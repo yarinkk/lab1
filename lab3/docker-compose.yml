@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  bank-account:
+    build: .
+    container_name: bank_app
+    command: ./app
