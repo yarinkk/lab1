@@ -17,4 +17,7 @@ Transaction.o: Transaction.cpp Transaction.h
 clean:
 	rm -f $(OBJECTS) $(TARGET)
 
-.PHONY: all clean
+run: 
+	./$(TARGET)
+
+.PHONY: all clean run 
