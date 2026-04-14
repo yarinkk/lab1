@@ -9,5 +9,3 @@
 python lab5/app.py
 ## Тести
 python -m unittest lab5/test_app.py
-## Doctest
-python -m doctest lab5/app.py -v
