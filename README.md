@@ -13,4 +13,4 @@
 
 ```bash
 g++ main.cpp -o app
-./app
+.\app.exe
