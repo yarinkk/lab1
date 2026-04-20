@@ -42,7 +42,6 @@ void totalSum() {
 }
 
 int main() {
-    // ✅ Фікс української мови
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
 
