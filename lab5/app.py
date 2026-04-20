@@ -13,9 +13,9 @@ def calculate_weight_cost(weight):
     return weight * 20
 
 
-def add_express_fee(cost, express):
+def add_express_fee(base, express):
     """
-    Додає плату за терміновість
+    Додає оплату за термінову доставку
 
     >>> add_express_fee(100, True)
     150
@@ -23,8 +23,8 @@ def add_express_fee(cost, express):
     100
     """
     if express:
-        return cost + 50
-    return cost
+        return base + 50
+    return base
 
 
 def calculate_total_cost(weight, express=False):
@@ -37,5 +37,14 @@ def calculate_total_cost(weight, express=False):
     60
     """
     base = calculate_weight_cost(weight)
-    total = add_express_fee(base, express)
-    return total
+    return add_express_fee(base, express)
+
+
+if __name__ == "__main__":
+    weight = float(input("Введіть вагу: "))
+    express_input = input("Термінова доставка? (y/n): ")
+
+    express = express_input.lower() == "y"
+
+    total = calculate_total_cost(weight, express)
+    print("Вартість доставки:", total)
