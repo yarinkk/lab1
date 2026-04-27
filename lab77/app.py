@@ -13,14 +13,10 @@ def categorize_expenses(records):
     total = 0
 
     for record in records:
-        category = record.get("category")
+        category = record.get("category", "unknown")
         amount = record.get("amount", 0)
 
-        if category in result:
-            result[category] += amount
-        else:
-            result[category] = amount
-
+        result[category] = result.get(category, 0) + amount
         total += amount
 
     result["total"] = total
