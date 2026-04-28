@@ -34,8 +34,18 @@ def main():
     result = categorize_expenses(records)
 
     print("Звіт витрат:")
+
+    translations = {
+        "food": "Їжа",
+        "transport": "Транспорт",
+        "entertainment": "Розваги",
+        "total": "Загальна сума",
+        "unknown": "Інше"
+    }
+
     for k, v in result.items():
-        print(f"{k}: {v}")
+        name = translations.get(k, k)
+        print(f"{name}: {v} грн")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import unittest
-from app import categorize_expenses
+from .app import categorize_expenses
 
 
 class TestCategorizeExpenses(unittest.TestCase):
